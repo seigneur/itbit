@@ -181,7 +181,7 @@ function executeRequest(options, callback)
 
 ItBit.prototype.getOrderBook = function(tickerSymbol, callback)
 {
-  makePublicRequest('v2', "/markets/" + tickerSymbol + "/orders", {}, callback);
+  makePublicRequest('v1', "/markets/" + tickerSymbol + "/order_book", {}, callback);
 };
 
 ItBit.prototype.getTicker = function(tickerSymbol, callback)
