@@ -189,9 +189,9 @@ ItBit.prototype.getTicker = function(tickerSymbol, callback)
   makePublicRequest('v1', "/markets/" + tickerSymbol + "/ticker", {}, callback);
 };
 
-ItBit.prototype.getTrades = function(tickerSymbol, callback)
+ItBit.prototype.getTrades = function(tickerSymbol, since,  callback)
 {
-    makePublicRequest('v1', "/markets/" + tickerSymbol + "/trades?since=0", {}, callback);
+    makePublicRequest('v1', "/markets/" + tickerSymbol + "/trades?since="+since", {}, callback);
 };
 
 ItBit.prototype.getWallets = function(userId, callback)
